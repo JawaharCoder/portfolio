@@ -465,75 +465,16 @@ Explore the top-right menu for more.
           <!-- Main Section Content End -->
 
           <!-- Main Section Media Start -->
-          <div
-            class="col-12 col-xl-6 main__media"
-            style="position: relative; overflow: hidden"
-          >
+          <div class="col-12 col-xl-6 main__media">
             <!-- Main Media Content Start -->
             <div class="mainmedia__container">
               <div class="mainmedia__content">
-                <!-- Section Video Background -->
-                <video
-                  id="main-video"
-                  class="mainmedia__image main-image-c1-2"
-                  src="./img/generated_video.mp4"
-                  autoplay
-                  muted
-                  loop
-                  playsinline
-                  style="
-                    object-fit: cover;
-                    width: 90%;
-                    height: 100%;
-                    display: none;
-                  "
-                ></video>
+                <!-- Section Image Background Start -->
+                <div class="mainmedia__image main-image-c1-2"></div>
+                <!-- Section Image Background End -->
               </div>
             </div>
             <!-- Main Media Content End -->
-
-            <!-- ==================== Launching Soon Overlay ==================== -->
-            <div
-              id="main-launching-overlay"
-              style="
-                position: absolute;
-                inset: 0;
-                background: rgba(0, 0, 0, 0.9);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                color: #fff;
-                text-align: center;
-                z-index: 10;
-              "
-            >
-              <!-- Loader -->
-              <div
-                id="main-loader"
-                style="
-                  width: 70px;
-                  height: 70px;
-                  border: 6px solid rgba(255, 255, 255, 0.2);
-                  border-top: 6px solid #00e5ff;
-                  border-radius: 50%;
-                  animation: spin 1s linear infinite;
-                "
-              ></div>
-
-              <!-- Text (hidden initially) -->
-              <div
-                id="main-launch-text"
-                style="display: none; animation: fadeIn 0.8s ease-in-out"
-              >
-                <h3 style="margin-top: 1.5rem; font-size: 2rem">
-                  🚀 Launching Soon
-                </h3>
-                <p style="margin-top: 0.5rem; opacity: 0.85">
-                  We’re polishing the final touches — stay tuned!
-                </p>
-              </div>
-            </div>
 
             <!-- Copyright Start -->
             <div class="mainmedia__copyright">
@@ -552,51 +493,6 @@ Explore the top-right menu for more.
             <!-- Copyright End -->
           </div>
           <!-- Main Section Media End -->
-
-          <!-- ==================== STYLES ==================== -->
-          <style>
-            @keyframes spin {
-              from {
-                transform: rotate(0deg);
-              }
-              to {
-                transform: rotate(360deg);
-              }
-            }
-
-            @keyframes fadeIn {
-              from {
-                opacity: 0;
-                transform: translateY(10px);
-              }
-              to {
-                opacity: 1;
-                transform: translateY(0);
-              }
-            }
-          </style>
-
-          <!-- ==================== SCRIPT ==================== -->
-          <script>
-            const loader = document.getElementById("main-loader");
-            const text = document.getElementById("main-launch-text");
-            const overlay = document.getElementById("main-launching-overlay");
-            const video = document.getElementById("main-video");
-
-            // Step 1: show loader
-            setTimeout(() => {
-              loader.style.display = "none";
-              text.style.display = "block";
-            }, 2500);
-
-            // Step 2: show video after launching text
-            setTimeout(() => {
-              overlay.style.opacity = "0";
-              overlay.style.transition = "opacity 1s ease";
-              video.style.display = "block";
-              setTimeout(() => overlay.remove(), 1000);
-            }, 5500);
-          </script>
         </div>
       </div>
     </section>
